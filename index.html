@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1831">
+  <meta name="description" content="Shaiful Rizal — creative leadership, visual communication and digital experiences. A professional portfolio and digital CV.">
+  <meta property="og:title" content="Shaiful Rizal | Creative Leadership & Visual Communication">
+  <meta property="og:description" content="Turning complex ideas into meaningful visual experiences.">
+  <meta property="og:type" content="website">
+  <title>Shaiful Rizal | Creative Leadership & Visual Communication</title>
+  <style>
+    :root{--navy:#0a1831;--navy2:#142b4d;--ink:#172238;--muted:#5b687b;--paper:#f7f9fc;--white:#fff;--line:#dce4ee;--cyan:#73d8db;--max:1160px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible,button:focus-visible{outline:3px solid #00a5ac;outline-offset:4px}
+    .skip{position:absolute;left:-999px;top:0;background:#fff;color:#111;padding:.7rem 1rem;z-index:99}
+    .skip:focus{left:12px;top:12px}
+    .container{width:min(var(--max),calc(100% - 48px));margin:auto}
+    .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:800}
+    .section{padding:98px 0;scroll-margin-top:84px}
+    .section-heading{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:38px}
+    .section-heading h2{font-size:clamp(2.2rem,4.5vw,4.2rem);line-height:1.12;letter-spacing:-.045em;margin:.65rem 0 0}
+    .section-heading p{color:var(--muted);max-width:400px;margin:0}
+    .topbar{position:sticky;top:0;z-index:30;background:rgba(10,24,49,.97);color:#fff;border-bottom:1px solid rgba(255,255,255,.11)}
+    .nav{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:2rem}
+    .brand{display:flex;align-items:center;gap:.8rem;font-weight:800;letter-spacing:.02em;white-space:nowrap}
+    .brand-mark{display:grid;place-items:center;border:1px solid rgba(115,216,219,.7);width:40px;height:40px;color:var(--cyan);letter-spacing:-.09em;font-size:.95rem}
+    .navlinks{display:flex;align-items:center;gap:2rem}
+    .navlinks a{font-size:.85rem;color:#d5e0ed;transition:color .2s}
+    .navlinks a:hover{color:var(--cyan)}
+    .navlinks .nav-cta{border:1px solid rgba(255,255,255,.45);border-radius:3px;padding:.65rem 1.1rem;color:#fff}
+    .mobile-toggle{display:none}
+    .hero{color:white;background:radial-gradient(ellipse at 83% 32%,#1d3d64 0,transparent 45%),linear-gradient(150deg,#09162b 15%,#112a4c 100%);overflow:hidden}
+    .hero-grid{min-height:640px;display:grid;grid-template-columns:1.25fr .75fr;gap:5%;align-items:center;padding:80px 0 94px}
+    .hero .eyebrow{color:var(--cyan)}
+    .hero h1{font-size:clamp(3.2rem,6.6vw,6.5rem);line-height:1.04;letter-spacing:-.065em;max-width:820px;margin:25px 0 28px}
+    .hero h1 span{color:var(--cyan)}
+    .hero-intro{color:#c9d5e3;font-size:1.08rem;max-width:550px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:3px;padding:14px 22px;font-weight:750;font-size:.88rem;transition:transform .2s,background .2s}
+    .button:hover{transform:translateY(-2px)}
+    .button-primary{background:var(--cyan);color:var(--navy)}
+    .button-outline{border:1px solid #869bb1;color:#fff}
+    .hero-art{position:relative;aspect-ratio:4/5;min-height:375px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(155deg,rgba(255,255,255,.08),rgba(255,255,255,.01));overflow:hidden}
+    .hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid rgba(115,216,219,.38);width:77%;aspect-ratio:1;border-radius:50%;left:12%;top:15%}
+    .hero-art:after{width:50%;left:25%;top:26%;border-color:rgba(255,255,255,.17)}
+    .art-lines{position:absolute;inset:0;background:linear-gradient(transparent 49.9%,rgba(255,255,255,.09) 50%,transparent 50.1%),linear-gradient(90deg,transparent 49.9%,rgba(255,255,255,.09) 50%,transparent 50.1%)}
+    .art-monogram{position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(9rem,22vw,18rem);font-weight:850;letter-spacing:-.13em;color:#fff;line-height:1;transform:translateX(-.07em)}
+    .art-caption{position:absolute;bottom:24px;left:24px;right:24px;display:flex;justify-content:space-between;gap:16px;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:#c4d6e7}
+    .underhero{background:#ecf1f6;border-bottom:1px solid var(--line)}
+    .underhero-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:26px 0}
+    .underhero-inner div{font-size:.8rem;text-transform:uppercase;font-weight:800;letter-spacing:.1em;color:#345171;border-right:1px solid #cdd9e5}
+    .underhero-inner div:last-child{border:0}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:9%;align-items:start}
+    .about-grid h2{font-size:clamp(2.3rem,4.5vw,4.6rem);line-height:1.12;letter-spacing:-.05em;margin:20px 0}
+    .about-copy{font-size:1.1rem;color:#49586c}
+    .about-copy p:first-child{color:var(--ink);font-size:1.45rem;line-height:1.55;margin-top:3px}
+    .about-signoff{display:flex;align-items:center;gap:18px;margin-top:35px;padding-top:24px;border-top:1px solid var(--line)}
+    .signoff-bar{background:#0a8e97;width:45px;height:2px}
+    .about-signoff strong{display:block}
+    .about-signoff small{color:var(--muted)}
+    .dark-section{background:var(--navy);color:#fff}
+    .dark-section .section-heading p{color:#b6c6d8}
+    .dark-section .eyebrow{color:var(--cyan)}
+    .expertise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .expertise-card{padding:34px;border:1px solid #304461;background:#122541;min-height:245px}
+    .expertise-card .number{font-size:.75rem;color:var(--cyan);letter-spacing:.15em}
+    .expertise-card h3{font-size:1.5rem;margin:33px 0 12px;letter-spacing:-.02em}
+    .expertise-card p{color:#b9c8da;margin:0}
+    .experience-card{border-top:2px solid var(--ink);padding:32px 0;display:grid;grid-template-columns:.8fr 1.2fr;gap:8%}
+    .experience-card .company{color:#536b83;font-weight:700}
+    .experience-card h3{font-size:clamp(1.5rem,2.5vw,2.2rem);margin:4px 0 15px;letter-spacing:-.035em}
+    .experience-card p{color:var(--muted);max-width:680px;margin:0 0 14px}
+    .chips{display:flex;flex-wrap:wrap;gap:9px}
+    .chip{font-size:.76rem;border:1px solid #cad6e3;padding:6px 10px;color:#36516d}
+    .projects{background:#eaf0f6}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .project-card{background:#fff;border:1px solid #d5dfeb;overflow:hidden}
+    .project-visual{height:220px;display:grid;place-items:center;position:relative;overflow:hidden}
+    .project-visual:after{content:"";position:absolute;inset:24px;border:1px solid rgba(255,255,255,.25)}
+    .project-visual span{font-size:clamp(4rem,7vw,7rem);font-weight:800;letter-spacing:-.1em;opacity:.75}
+    .visual-1{background:linear-gradient(145deg,#163454,#408b96);color:#e6f9f8}
+    .visual-2{background:linear-gradient(140deg,#c9d9e6,#6f91b2);color:#15385a}
+    .visual-3{background:linear-gradient(140deg,#1c263e,#405e86);color:#8ce4df}
+    .project-body{padding:25px}
+    .project-body small{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:#4f6e8c}
+    .project-body h3{font-size:1.32rem;line-height:1.3;margin:12px 0}
+    .project-body p{color:var(--muted);margin:0;font-size:.91rem}
+    .project-note{font-size:.85rem;color:#566d83;margin-top:28px}
+    .education-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .education-item{padding:27px 22px;border-left:3px solid #2b8792;background:#fff;box-shadow:0 10px 35px rgba(16,39,66,.04)}
+    .education-item small{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:#50718f;font-weight:800}
+    .education-item h3{font-size:1.25rem;line-height:1.35;margin:16px 0 10px}
+    .education-item p{color:var(--muted);margin:0;font-size:.91rem}
+    .contact{background:var(--navy);color:#fff}
+    .contact-box{display:grid;grid-template-columns:1.4fr .6fr;align-items:end;gap:30px}
+    .contact h2{font-size:clamp(2.7rem,5.6vw,5.6rem);letter-spacing:-.055em;line-height:1.1;margin:18px 0 28px}
+    .contact p{color:#b9c9d9;max-width:580px}
+    .contact .eyebrow{color:var(--cyan)}
+    .contact-links{display:grid;gap:12px}
+    .contact-links a{border:1px solid #456078;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+    .contact-links a:hover{border-color:var(--cyan);color:var(--cyan)}
+    .footer{background:#071224;color:#a5b6c8;padding:23px 0;font-size:.8rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:880px){
+      .hero-grid{grid-template-columns:1fr;min-height:0;padding:70px 0}
+      .hero-art{display:none}
+      .project-grid,.education-grid{grid-template-columns:1fr 1fr}
+      .about-grid{gap:5%}
+      .contact-box{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .container{width:min(var(--max),calc(100% - 36px))}
+      .section{padding:68px 0}
+      .section-heading{display:block}
+      .section-heading p{margin-top:18px}
+      .nav{min-height:66px}
+      .mobile-toggle{display:block;background:transparent;border:1px solid #53667c;color:#fff;padding:8px 12px;border-radius:3px;font:inherit;font-weight:700}
+      .navlinks{display:none;position:absolute;top:65px;left:0;right:0;background:#0a1831;padding:20px 18px 28px;flex-direction:column;align-items:stretch;gap:18px;border-bottom:1px solid #294362}
+      .navlinks.open{display:flex}
+      .hero-grid{padding:60px 0 70px}
+      .hero h1{font-size:clamp(2.8rem,11vw,4.5rem)}
+      .underhero-inner{grid-template-columns:1fr;gap:12px;padding:20px 0}
+      .underhero-inner div{border-right:0}
+      .about-grid,.expertise-grid,.project-grid,.education-grid,.experience-card{grid-template-columns:1fr}
+      .experience-card{gap:10px}
+      .project-visual{height:190px}
+      .expertise-card{min-height:0;padding:26px}
+      .expertise-card h3{margin-top:22px}
+      .footer-inner{display:block}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="topbar">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Shaiful Rizal — Home"><span class="brand-mark" aria-hidden="true">SR</span> SHAIFUL RIZAL</a>
+      <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav" type="button">Menu</button>
+      <div id="main-nav" class="navlinks">
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#work">Selected Work</a>
+        <a class="nav-cta" href="#contact">Get in Touch &nearr;</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Corporate Creative Portfolio / Digital CV</div>
+          <h1>Ideas made <span>meaningful.</span></h1>
+          <p class="hero-intro">I'm <strong>Shaiful Rizal</strong>. My work sits at the intersection of creative leadership, visual communication, and digital experiences — translating complex ideas into clear, purposeful stories.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">Explore Selected Work <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="#about">Professional Profile <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="art-lines"></div><div class="art-monogram">SR</div><div class="art-caption"><span>Visual Thinking</span><span>Creative Direction</span></div></div>
+      </div>
+    </section>
+    <div class="underhero"><div class="container underhero-inner"><div>Creative Leadership</div><div>Visual Communication</div><div>Digital Experiences</div></div></div>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div><div class="eyebrow">01 / About</div><h2>Clarity is a creative advantage.</h2></div>
+        <div class="about-copy">
+          <p>I believe the best creative work does more than look good. It helps people understand, connect, and act.</p>
+          <p>My professional practice combines visual storytelling, design judgement, creative production, and collaboration with multidisciplinary stakeholders. I focus on shaping messages that feel relevant to their audience and work across platforms.</p>
+          <p>This site is a living portfolio. Selected case studies and supporting materials will be added over time.</p>
+          <div class="about-signoff"><div class="signoff-bar"></div><div><strong>Shaiful Rizal</strong><small>Creative Leadership · Visual Communication</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="expertise">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">02 / Expertise</div><h2>What I bring<br>to the table.</h2></div><p>Connecting strategy, storytelling, people, and production to build effective communication.</p></div>
+        <div class="expertise-grid">
+          <article class="expertise-card"><span class="number">01 — STRATEGY</span><h3>Visual Communication</h3><p>Message clarity, information hierarchy, communication design and audience-focused storytelling.</p></article>
+          <article class="expertise-card"><span class="number">02 — LEADERSHIP</span><h3>Creative Direction</h3><p>Creative reviews, team collaboration, stakeholder alignment and project delivery.</p></article>
+          <article class="expertise-card"><span class="number">03 — PRODUCTION</span><h3>Multimedia & Motion</h3><p>Video, motion graphics, campaign assets and integrated digital content.</p></article>
+          <article class="expertise-card"><span class="number">04 — EXPERIENCE</span><h3>Digital & UI/UX</h3><p>Content-led web experiences, visual systems and usable digital touchpoints.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">03 / Professional Experience</div><h2>Experience &<br>approach.</h2></div><p>A snapshot of the professional practice behind the portfolio. Detailed career history can be added later.</p></div>
+        <article class="experience-card"><div><div class="company">Tenaga Nasional Berhad (TNB)</div><small>Creative & Digital Communication</small></div>
+          <div><h3>Creative multimedia, communications & delivery</h3><p>Creative leadership and hands-on production supporting corporate communication, digital content, multimedia projects and cross-functional stakeholder needs.</p>
+            <div class="chips"><span class="chip">Art Direction</span><span class="chip">Team Collaboration</span><span class="chip">Video Production</span><span class="chip">Digital Design</span><span class="chip">Project Coordination</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects" id="work">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">04 / Selected Work</div><h2>Work, with<br>purpose.</h2></div><p>Project categories are ready. Actual work samples and case studies will be uploaded in the next version.</p></div>
+        <div class="project-grid">
+          <article class="project-card"><div class="project-visual visual-1" aria-hidden="true"><span>01</span></div><div class="project-body"><small>Portfolio category / Placeholder</small><h3>Corporate Storytelling</h3><p>Campaigns, content and communication design. Case study coming soon.</p></div></article>
+          <article class="project-card"><div class="project-visual visual-2" aria-hidden="true"><span>02</span></div><div class="project-body"><small>Portfolio category / Placeholder</small><h3>Digital Experiences</h3><p>Web, UI/UX and information design. Case study coming soon.</p></div></article>
+          <article class="project-card"><div class="project-visual visual-3" aria-hidden="true"><span>03</span></div><div class="project-body"><small>Portfolio category / Placeholder</small><h3>Motion & Multimedia</h3><p>Video production and motion-led storytelling. Case study coming soon.</p></div></article>
+        </div>
+        <p class="project-note">Note: These cards are placeholders, not claims of completed named projects. Only approved and non-confidential material should be published here.</p>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading"><div><div class="eyebrow">05 / Education</div><h2>Learning is<br>part of the work.</h2></div><p>A foundation in multimedia and art & design, with continued study in visual communication.</p></div>
+        <div class="education-grid">
+          <article class="education-item"><small>In progress</small><h3>Master's in Visual Communication & New Media</h3><p>Universiti Teknologi MARA (UiTM)</p></article>
+          <article class="education-item"><small>Academic background</small><h3>Bachelor's Degree in Art & Design (Hons)</h3><p>Universiti Teknologi MARA (UiTM)</p></article>
+          <article class="education-item"><small>Academic background</small><h3>Diploma in Multimedia</h3><p>Cosmopoint</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-box">
+        <div><div class="eyebrow">06 / Contact</div><h2>Let's make ideas<br>matter.</h2><p>Interested in discussing creative leadership, visual communication or a future opportunity? Reach me via my professional GitHub profile. A downloadable CV will be added when the final document is ready.</p></div>
+        <div class="contact-links"><a href="https://github.com/shaifulrizal" target="_blank" rel="noopener noreferrer"><span>GitHub Profile</span><span aria-hidden="true">↗</span></a><a href="#experience"><span>View Experience</span><span aria-hidden="true">↑</span></a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© 2026 Shaiful Rizal. All rights reserved.</span><span>Designed with purpose · Portfolio v1.0</span></div></footer>
+  <script>
+    const menuBtn=document.querySelector('.mobile-toggle');
+    const navLinks=document.querySelector('.navlinks');
+    menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}});
+  </script>
+</body>
+</html>
