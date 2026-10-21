@@ -1,26 +1,33 @@
 # Shaiful Rizal | Corporate Creative Portfolio
 
-Version 1.0 of a responsive one-page digital CV and professional portfolio. The site is contained in `index.html` with no framework or build step.
+A responsive one-page portfolio and digital professional profile. Dark cinematic hero, sage accents, editorial typography and four portfolio collections. No framework, dependencies or build step.
 
-## Preview and publish via GitHub Pages
+## Website
 
-1. Open this repository’s **Settings → Pages**.
-2. Under **Build and deployment**, select **Deploy from a branch**.
-3. Set the branch to **main**, folder to **/(root)** and click **Save**.
-4. After the Pages deployment completes, open **https://shaifulrizal.github.io/portfolio/**.
+https://shaifulrizal.github.io/portfolio/
 
-Direct settings link: https://github.com/shaifulrizal/portfolio/settings/pages
+To enable GitHub Pages, open [Settings → Pages](https://github.com/shaifulrizal/portfolio/settings/pages), choose **Deploy from a branch**, then **main / (root)** and Save. The site uses relative asset URLs, so it works under `/portfolio/` as well as a custom domain.
 
-## Sections
-Home · About · Expertise · Experience · Selected Work · Education · Contact
+## Files to edit
 
-## Next updates
-- Replace Selected Work placeholder cards with verified, shareable projects.
-- Add approved project thumbnails, case studies, and outcomes.
-- Add email/LinkedIn contacts and a Download CV link only once the PDF is ready.
-- Refine titles, dates, and role descriptions for interview use.
+- `index.html`: biography, professional experience, education, links and portfolio collection markup.
+- `assets/portfolio.css`: layout, colours, typography, responsive layouts and print styles.
+- `assets/portfolio.js`: mobile navigation, collection filters, collection preview dialogs and print action.
+- `assets/hero-sculpture.svg`: original decorative banner artwork.
+- `assets/favicon.svg`: site icon.
 
-## Privacy
-This repository and published website are **public**. Do not commit confidential internal work files, proprietary brand assets or personal information you do not want searchable online. Private archive repository `personal-knowledge-hub` remains separate.
+## Sections & interactions
 
-To change content, edit `index.html` and commit the change. GitHub Pages republishes after each deployment.
+- Sticky navigation: Home, Portfolio, About, Experience and Contact.
+- Hero banner with portfolio and biography calls to action.
+- Portfolio collections with category filters and accessible preview dialogs.
+- About, expertise accordions and creative approach.
+- Professional practice, education and a browser-printable profile.
+- Professional GitHub link and back-to-top navigation.
+- Responsive mobile menu, keyboard support and reduced-motion preferences.
+
+## Content status
+
+The collection covers are illustrative artwork, clearly labelled in the interface. They are not completed client projects. Add actual shareable samples, project descriptions and outcomes when ready. Career dates, metrics, endorsements and awards have not been invented. The Master's degree remains labelled **In progress**. A CV download, email address or LinkedIn link should be added only when the real file or details are available.
+
+Existing content folders are preserved. This public portfolio remains separate from the private archive.

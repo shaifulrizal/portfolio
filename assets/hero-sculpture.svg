@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 650" fill="none">
+  <defs>
+    <linearGradient id="metal" x1="106" y1="126" x2="462" y2="491" gradientUnits="userSpaceOnUse"><stop stop-color="#536d4b"/><stop offset=".22" stop-color="#c5dfb3"/><stop offset=".39" stop-color="#f2ffe7"/><stop offset=".5" stop-color="#728e62"/><stop offset=".7" stop-color="#263b25"/><stop offset=".88" stop-color="#a6c394"/><stop offset="1" stop-color="#536c45"/></linearGradient>
+    <linearGradient id="inner" x1="200" y1="150" x2="414" y2="512" gradientUnits="userSpaceOnUse"><stop stop-color="#1c2c1a"/><stop offset=".3" stop-color="#6e8a5e"/><stop offset=".6" stop-color="#d5eec3"/><stop offset="1" stop-color="#506c41"/></linearGradient>
+    <linearGradient id="edge" x1="100" y1="195" x2="510" y2="435" gradientUnits="userSpaceOnUse"><stop stop-color="#d9f4c4"/><stop offset=".43" stop-color="#49613a"/><stop offset=".74" stop-color="#c6e4af"/><stop offset="1" stop-color="#24361e"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#89b177" stop-opacity=".18"/><stop offset="1" stop-color="#89b177" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="14" dy="18" stdDeviation="12" flood-color="#050b04" flood-opacity=".65"/></filter>
+  </defs>
+  <circle cx="318" cy="308" r="267" fill="url(#halo)"/>
+  <g stroke="#88a075" opacity=".17"><circle cx="310" cy="315" r="240"/><circle cx="310" cy="315" r="200"/><path d="M40 315h540M310 45v540"/><path d="m140 145 340 340m0-340L140 485" stroke-dasharray="2 7"/></g>
+  <ellipse cx="326" cy="523" rx="171" ry="24" fill="#050b04" opacity=".7" filter="url(#soft)"/>
+  <g filter="url(#shadow)" transform="rotate(-32 310 310)">
+    <ellipse cx="310" cy="310" rx="191" ry="130" stroke="url(#metal)" stroke-width="48" transform="rotate(65 310 310)"/>
+    <ellipse cx="310" cy="310" rx="166" ry="106" stroke="url(#inner)" stroke-width="1.5" transform="rotate(65 310 310)"/>
+    <ellipse cx="310" cy="310" rx="201" ry="117" stroke="url(#metal)" stroke-width="48" transform="rotate(-5 310 310)"/>
+    <ellipse cx="310" cy="310" rx="176" ry="93" stroke="url(#inner)" stroke-width="1.5" transform="rotate(-5 310 310)"/>
+    <ellipse cx="310" cy="310" rx="191" ry="117" stroke="url(#edge)" stroke-width="44" transform="rotate(-64 310 310)"/>
+    <ellipse cx="310" cy="310" rx="168" ry="95" stroke="url(#inner)" stroke-width="1.2" transform="rotate(-64 310 310)"/>
+    <path d="M192 191c-45 43-36 136 20 203" stroke="url(#metal)" stroke-width="47"/>
+    <path d="M169 205c-29 50-15 127 33 185" stroke="#e9ffda" stroke-opacity=".45" stroke-width="1.5"/>
+  </g>
+  <g stroke="#a7c791" stroke-width="1"><path d="M91 104v14m-7-7h14M528 489v14m-7-7h14"/><circle cx="493" cy="140" r="3"/><circle cx="113" cy="463" r="2"/></g>
+</svg>
